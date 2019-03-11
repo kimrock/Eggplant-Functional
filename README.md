@@ -1,9 +1,10 @@
 ## Eggplant Functional
 * 웹사이트: https://eggplant.io/
 * 다운로드: https://eggplant.io/downloads
-* 기술 : http://docs.testplant.com/eggplant-documentation-home.htm
+* 기술문서: http://docs.testplant.com/eggplant-documentation-home.htm
 ------
 ## 환경설정
+* 트라이얼 사용법
 * 다운로드, 인스톨
 * iOS 테스트 환경
 * Android 테스트 환경
