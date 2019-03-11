@@ -16,5 +16,4 @@
 > Best Practices
 
 ## Certification
-> Eggplant Functional Expert
-> Eggplant Functional Genius
+> Eggplant Functional Expert/Genius
