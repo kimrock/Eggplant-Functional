@@ -1,18 +1,20 @@
 ## Eggplant Functional
+------
+## 환경설정
+> Download, Install
+> iOS 테스트 환경
+> Android 테스트 환경
+> PC 테스트 환경
 
-# 환경설정
-> 
-> iOS 기기
-> Android 기기
+## 스크립팅 가이드
+> 온라인 트레이닝 코스 해석
 
-# 스크립팅 가이드
-> Online Course
-> 
-
-# 데모 스크립트
+## 데모 스크립트
 > 모바일/앱
 > PC/웹
+> 트러블슈팅
+> Best Practices
 
-# Certification
-> Eggplant Functional Expert (Foundation Level)
-> Eggplant Functional Genius (Practitioner Level)
+## Certification
+> Eggplant Functional Expert
+> Eggplant Functional Genius
