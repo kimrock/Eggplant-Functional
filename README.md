@@ -1,7 +1,7 @@
 ## Eggplant Functional
-* [웹사이트](https://eggplant.io/)
-* [다운로드](https://eggplant.io/downloads)
-* [기술문서](http://docs.testplant.com/eggplant-documentation-home.htm)
+* [공식 웹사이트](https://eggplant.io/)
+* [제품 다운로드](https://eggplant.io/downloads)
+* [기술 문서](http://docs.testplant.com/eggplant-documentation-home.htm)
 ------
 
 ## 공식 온라인 트레이닝 코스, Certification
