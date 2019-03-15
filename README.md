@@ -1,5 +1,6 @@
-#### Eggplant Functional은 VNC 프로토콜을 기반으로 하는 GUI 자동화 테스트 툴입니다.
-#### iOS, Android, Windows, MacOS, Linux 등 UI를 포함하는 거의 모든 테스트 대상(System Under Test)으로 사용자 액션을 전달할 수 있으며, 아래 링크에서 자세한 제품 소개 및 30일 무료 트라이얼을 사용해볼 수 있습니다.
+## Eggplant Functional
+### Eggplant Functional은 VNC 프로토콜을 기반으로 하는 GUI 자동화 테스트 툴입니다.
+### iOS, Android, Windows, MacOS, Linux 등 UI를 포함하는 거의 모든 테스트 대상(System Under Test)으로 사용자 액션을 전달할 수 있으며, 아래 링크에서 자세한 제품 소개 및 30일 무료 트라이얼을 사용해볼 수 있습니다.
 
 * [공식 웹사이트](https://eggplant.io/)
 * [제품 다운로드](https://eggplant.io/downloads)
