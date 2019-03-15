@@ -9,7 +9,6 @@
 ------
 
 ## 공식 온라인 트레이닝 코스, Certification
-!(Users/kimrock/Desktop/eggplant.png)
 * [온라인 트레이닝 코스](https://eggplant.io/training-and-certifications)
 * [Eggplant Functional - Level 1 - Expert](https://eggplant.io/eggplant-functional-level-1)
 * [Eggplant Functional - Level 2 - Genius](https://eggplant.io/eggplant-functional-level-2-genius)
