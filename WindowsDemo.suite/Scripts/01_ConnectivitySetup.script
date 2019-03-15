@@ -1,0 +1,6 @@
+﻿// 연결정보 확인
+Log ConnectionInfo()
+Log the Name of ConnectionInfo()
+Log the ScreenSize of ConnectionInfo()
+wait 10
+

@@ -1,0 +1,36 @@
+﻿// 엑셀 xlsx 파일을 로컬에서 제어하는 경우
+set myExcelFile to (type: "excel", file: "/Users/kimrock/Desktop/DemoSheet.xlsx")
+wait 2
+put the records of myExcelFile into AllForOne
+put AllForOne joined by return
+wait 1
+Log AllForOne joined by return
+wait 5
+
+
+// 엑셀 파일을 ePF내에 저장하고 제어하는 경우
+set myExcelDB to Workbook(ResourcePath("DemoSheet.xlsx"))
+set myWorksheet to myExcelDB.Worksheet("Sheet 1")
+put the date into Cell("E1") of myExcelDB
+wait 3
+
+put Cell(A2) of myExcelDB into testString
+Log testString
+wait 2
+
+
+
+// 엑셀에서 읽은 데이터로 웹검색
+Tap (220,1720) -- 좌표 탭
+wait 2
+TypeText (testString), returnKey
+wait 5
+
+// 구글 검색 종료
+Tap (836, 1850) -- 좌표 탭
+wait 3
+Repeat until imagefound(image:"buttonClearAll", waitFor:0)
+	Tap (image:"buttonClose", waitFor:5)
+End repeat
+wait 1
+Tap (image:"buttonClearAll", waitFor:2)

@@ -1,0 +1,79 @@
+﻿// DPI, 화면비, 마우스 포인터 고정 설정
+Set DeviceName to the Name of ConnectionInfo()
+Set DeviceDPI to (Win7_Demo:"96") -- ePF 기본값 72, Windows7은 96
+Set the ReadTextSettings to (DPI:DeviceDPI.(DeviceName))
+Set myScreen to the ScreenSize of ConnectionInfo()
+Setoptions (ShouldRepositionMouse:true, RepositionPoint:(683,384))
+wait 5
+
+// 크롬 브라우저 실행
+Set the SearchRectangle to ((myScreen.x*.0, myScreen.y*.95), (myScreen.x*.25, myScreen.y*1))
+If imageFound(image:"chrome", waitFor:5) then Click FoundImageLocation()
+Set the SearchRectangle to empty
+wait 5
+If imageFound(image:"chromeReload", waitFor:10)
+	LogSuccess "크롬 브라우저가 정상 실행되었습니다."
+else
+	LogWarning "다시 실행하십시오."
+End If
+wait 10
+
+// 브라우저 크기 최대화
+MoveTo (1243,11)
+Click
+(*Set the SearchRectangle to ((myScreen.x*.8, myScreen.y*0), (myScreen.x*1, myScreen.y*.05))
+Repeat until imageFound(image:"chromeMinimize", waitFor:10)
+	Click (image:"chromeMaximize", waitFor:10)
+End repeat
+Set the SearchRectangle to empty*)
+Click (200,200)
+wait 5
+
+// 웹주소 입력
+TypeText F6
+Set the NextKeyDelay to 0.2
+If imageFound(image:"chromeSearch", waitFor:10)
+	TypeText "eggplant.io", enterKey
+End If
+Set the NextKeyDelay to 0.01
+wait 5
+
+// 웹페이지 로딩 확인
+If imageFound(image:"eggplantHeader",waitFor:5) and if imageFound(image:"chromeReload", waitFor:5)
+	LogSuccess "에그플랜트 공식 웹사이트 입니다."
+End If
+wait 10
+
+// 웹페이지 네비게이션
+Moveto remotescreensize()*(1/2)
+repeat until imagefound(text:"All rights",waitFor:0)
+	ScrollWheelDown 6
+	wait .5
+end repeat
+wait 10
+
+// 웹페이지 상단 이동
+Moveto remotescreensize()*(1/2)
+Repeat 6 times
+	TypeText PageUp
+	wait 0.3
+End repeat
+wait 5
+
+// 웹메뉴 접근: Customers
+Moveto (900,120)
+wait 2
+Set the SearchRectangle to ((845,140),(1045,400))
+If imageFound(text:"CUSTOMERS", CaseSensitive:Yes, waitFor:5) then Click FoundImageLocation()
+Set the SearchRectangle to empty
+wait 5
+
+// 웹페이지 네비게이션: Customers
+Moveto remotescreensize()*(1/2)
+repeat until imagefound(image:"TryEggplantToday",waitFor:0)
+	ScrollWheelDown 3
+	wait 1.5
+end repeat
+wait 10
+
+

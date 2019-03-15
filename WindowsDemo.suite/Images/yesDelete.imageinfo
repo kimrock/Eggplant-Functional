@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2018-10-31 08:04:33 +0000";
+    CaptureHost = "Win7_Demo";
+    CaptureScreenSize =     (
+        1366,
+        768
+    );
+    HasAlpha = 1;
+    HotSpotX = 52;
+    HotSpotY = 10;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 694;
+    OriginalLocationY = 483;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    tags =     (
+    );
+}

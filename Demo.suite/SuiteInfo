@@ -1,0 +1,22 @@
+﻿{
+    EPVersionNumber = 1902201105;
+    Schedules =     (
+    );
+    ScriptMetaData =     {
+        "10_HomeScreen" =         {
+            TableScriptUserActionType = "Not a Table Action";
+        };
+        "50_KillYouTube" =         {
+            TableScriptUserActionType = "Not a Table Action";
+        };
+        "99_GmailAccess" =         {
+            TableScriptUserActionType = "Not a Table Action";
+        };
+    };
+    SuiteEncodedTextKey = ";3I?nqqv`i3@_^m9";
+    SuiteVariables = "{:}";
+    helpedSuitesInfo =     (
+    );
+    helperSuitesInfo =     (
+    );
+}

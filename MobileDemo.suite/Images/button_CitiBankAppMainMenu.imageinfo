@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2018-11-14 05:07:40 +0000";
+    CaptureHost = iPhone8;
+    CaptureScreenSize =     (
+        750,
+        1334
+    );
+    HasAlpha = 1;
+    HotSpotX = 22;
+    HotSpotY = 21;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 38;
+    OriginalLocationY = 79;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    tags =     (
+    );
+}

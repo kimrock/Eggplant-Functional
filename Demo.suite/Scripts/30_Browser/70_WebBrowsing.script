@@ -1,0 +1,31 @@
+﻿// 에그플랜트 웹사이트 접속
+set the nextKeyDelay to .1
+TypeText "https://eggplant.io", returnKey
+wait 5
+set the nextKeyDelay to 0.01
+
+
+// 페이지 네비게이션
+Repeat until imageFound(image:"buttonTryEggplant", waitFor:0)
+	If the repeatindex is greater than 50
+		LogWarning "로고를 찾지 못했습니다."
+	End if
+	SwipeUp
+	wait .5
+End Repeat
+LogSuccess "페이지 검색을 완료하였습니다."
+wait 3
+
+
+// 특정 한글 단어 검색 & 페이지 네비게이션
+Tap (text:"솔루션", Language:"Korean", waitFor:10)
+
+
+// Chrome 시작화면으로 전환
+Run "30_Browser/80_KillChrome"
+
+
+// 홈화면 전환
+Run "10_Preconditions/10_HomeScreen"
+
+

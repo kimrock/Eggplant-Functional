@@ -1,0 +1,51 @@
+﻿// Chrome 실행 후 정상 실행 확인
+Tap (Waitfor:10, Image:"iconChrome")
+Wait 3
+
+Repeat until imageFound(image:"logoGoogle", waitFor:0)
+	Tap (image:"iconLeftArrow")
+	wait 1
+End repeat
+Log "Google Chrome 입니다."
+
+// 크롬 검색창 접근
+WaitFor 10, (image:"iconSearchMic")
+Click FoundImageLocation() - (400,0)
+
+
+// 에그플랜트 웹사이트 접속
+set the nextKeyDelay to .1
+TypeText "https://eggplant.io", returnKey
+set the nextKeyDelay to 0.01
+wait 5
+
+
+// 페이지 네비게이션
+set the swipeSpeed to 10
+Repeat until imageFound(image:"buttonTryEggplant", waitFor:0)
+	If the repeatindex is greater than 50
+		LogWarning "로고를 발견하지 못했습니다."
+	End if
+	SwipeUp
+	wait .5
+End Repeat
+LogSuccess "페이지 마지막까지 검색하였습니다."
+set the swipeSpeed to 40
+wait 5
+
+// 크롬 시작화면으로 전환
+Repeat until imageFound(image:"iconLeftArrow", waitFor:0) -- for iOS
+	SwipeDown
+	wait 1
+End Repeat
+wait 2
+
+Repeat until imageFound(image:"logoGoogle", waitFor:0) -- for both of iOS and Android
+	Tap (image:"iconLeftArrow")
+	wait 1
+End repeat
+wait 2
+
+
+// 홈화면 전환
+run "10_HomeScreen"

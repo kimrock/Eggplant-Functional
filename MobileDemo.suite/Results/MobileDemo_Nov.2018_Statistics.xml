@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<statistics>
+ <script name="20_Settings">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2019-03-12 15:03:43 +0900</FirstRun>
+  <LastRun>2019-03-12 15:03:43 +0900</LastRun>
+  <TotalTimeOnSuccess>23.381159</TotalTimeOnSuccess>
+ </script>
+</statistics>

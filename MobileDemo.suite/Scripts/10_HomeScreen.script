@@ -1,0 +1,23 @@
+﻿// 홈화면 전환
+PressHomeButton
+Wait 1
+SwipeLeft
+Wait 1
+SwipeLeft
+Wait 1
+
+
+// 크롬아이콘과 유튜브 아이콘 확인
+set myScreen to the ScreenSize of ConnectionInfo()
+set the searchRectangle to ((myScreen.x*.0, myScreen.y*.15), (myScreen.x, myScreen.y*.3))
+If Imagefound("iconChrome") and if imagefound("iconYoutube")
+	LogSuccess "홈화면 입니다."
+End If
+set the searchRectangle to empty
+Wait 1
+
+
+TypeText HomeButton, HomeButton
+
+Log connectionInfo()
+

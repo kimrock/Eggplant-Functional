@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="20_Settings">
+ <run>
+  <RunDate>2019-03-12 15:03:43.903 +0900</RunDate>
+  <Status>Success</Status>
+  <Duration>23.381159</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20190312_150343.903/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

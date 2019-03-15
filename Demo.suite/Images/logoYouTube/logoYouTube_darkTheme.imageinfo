@@ -1,0 +1,22 @@
+﻿{
+    CaptureDate = "2018-08-03 05:34:09 +0000";
+    CaptureHost = "iPhone_8";
+    CaptureScreenSize =     (
+        750,
+        1334
+    );
+    HasAlpha = 1;
+    HotSpotX = 96;
+    HotSpotY = 26;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 27;
+    OriginalLocationY = 59;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = TextSmoothSquare;
+    tags =     (
+    );
+}

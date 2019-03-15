@@ -1,0 +1,103 @@
+﻿// 크로스 모바일 스크립팅
+// http://docs.testplant.com/ePF/using/epf-cross-mobile-scripting.htm
+set DeviceName to the name of connectioninfo() -- 커넥션 리스트에서 연결된 디바이스 이름 읽기, 아래 기기명과 일치시킬 것
+set DeviceDPI to (iPhone_8:"326",Google_Pixel2:"441",iPhone_6S:"326",Galaxy_S4:"441") -- 기본값 72
+set the ReadTextSettings to (DPI:DeviceDPI.(DeviceName)) -- 디바이스에 맞춰서 DPI 세팅, OCR 성능 대폭 향상
+
+
+
+Log the screensize of connectionInfo()
+Log the name of connectionInfo()
+
+
+
+// 홈화면에서 플레이스토어 실행하는 예제
+PressHomeButton
+Wait 2
+Tap (image:"icon_playstore", Waitfor:5)
+Wait 2
+LogSuccess "플레이스토어 실행"
+CaptureScreen
+
+
+Click ("buttonBack", waitfor:5)
+
+
+
+// 주석 처리: 1라인
+-- 주석 처리: 1라인
+(*) 주석 처리: 코드 블럭 단위
+Click "myImage"
+SwipeLeft
+Wait 5
+(/*)
+
+
+// 홈화면에서 아이콘 찾고 대기
+PressHomeButton
+Wait 2
+SwipeLeft -- 팁: 제조사별로 iOS vs. Android 스와이프 방향이 서로 반대일 수 있음
+SwipeLeft -- 팁: Swipe 후 바탕 화면 페이지가 바뀌지 않도록 해두면 편리
+WaitFor 10, "myImage" -- 'myImage' 라는 이름으로 이미지 하나 캡처해보세요.
+Log "테스트 준비 완료." -- 테스트 시작 지점이 어디인지 고려할 것
+Wait 2
+
+
+// 제한 시간 내 검색 후 직접 실행하는 예제
+Tap (Image:"myImage", WaitFor:10) -- 제한 시간 10초 안에 이미지 찾아서 탭
+Wait 3
+
+
+// 이미지 또는 텍스트를 먼저 찾고 찾은 위치를 선택하는 예제
+WaitFor (Image:"myImage", WaitFor:10)
+Click FoundImageLocation()
+
+WaitFor (Text:"찾을단어", Language:"Korean", WaitFor:10)
+Click FoundImageLocation()
+
+WaitFor (Text:"errorMessage", WaitFor:10) -- 영어는 Language 필요 없음
+LogError "test failed, try again!"
+
+
+// 이미지를 찾으면 (즉, test step이 성공하면) 성공 로그 기록
+WaitFor 20, "myImage"
+LogSuccess "OOO을 성공적으로 실행하였습니다."
+
+
+// 이미지 찾고 로그 기록
+Wait 3 -- 스와이프처럼 화면을 직접 움직이는 명령어를 스크립트 처음 사용 시, 쉬는 시간을 잠깐 주는 것이 좋음
+SwipeDown
+Wait 2 -- 스와이프 실행 후 실제 디바이스 화면 움직임과 뷰어 화면 sync가 안 맞을 수 있음. 따라서 쉬는 시간을 약간 주는 것이 좋음
+SwipeDown
+Wait 2
+If imagefound("myLogoImage") then LogSuccess "성공했습니다."
+
+
+// 한글 텍스트 찾아서 실행하기
+Wait 2
+Set the searchRectangle to ("290,1240", "430,1330") -- 빠른 실행을 위해 검색 범위를 특정, 뷰어 화면에서 좌표를 확인하세요.
+-- 한글 단어 한 두개 정도는 잘 찾지만, 문장 레벨은 매우 어려움 (문장 검색은 고급 AI 수준...)
+Waitfor 10, (Text:"한글이름", Language:"Korean", Contrast:On) -- Contrast:On 내부적으로 배경은 흰색&텍스트는 검은색으로 처리, 텍스트 검색 향상
+Tap FoundImageLocation()
+Set the SearchRectangle to () -- 검색 범위 원복
+Wait 5
+
+
+// 이미지 또는 텍스트를 찾은 경우에만 액션을 실행하는 예제
+If Imagefound(Text:"찾았어요", Language:"Korean", Contrast:On, WaitFor:30) then Click (375,1040) -- 특정 좌표를 클릭
+
+
+// SUT 화면 내 특정 영역에 노출되는 텍스트와 이미지를 비교하는 로직
+Set the searchRectangle to (155,640,695,920) -- 검색 영역을 특정, 찾고자 하는 UI가 등장하는 위치를 적절하게 찾아서 넣을 것
+If ImageFound(Image:"buttonImage", WaitFor:5)
+	LogSuccess ReadText((300,690), (530,775))&&"검색 성공" -- 특정 영역에서 읽은 텍스트와 직접 입력한 텍스트를 합쳐러 출력하는 예제
+	Click FoundImageLocation()
+else if ImageFound(text:"아니거나", Language:"Korean", Contrast:On, WaitFor:10)
+	LogWarning "검색 실패"
+end If
+Set the searchRectangle to ()
+
+
+// 이미지 찾고 찾은 위치 클릭하기
+If ImageFound(Image:"button_downArrow") then Click FoundImageLocation()
+Wait 2

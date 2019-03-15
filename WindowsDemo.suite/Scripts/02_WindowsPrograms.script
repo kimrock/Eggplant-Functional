@@ -1,0 +1,88 @@
+﻿// DPI, 화면비, 마우스 포인터 고정 설정
+Set DeviceName to the Name of ConnectionInfo()
+Set DeviceDPI to (Win7_Demo:"96") -- ePF 기본값 72, Windows7은 96
+Set the ReadTextSettings to (DPI:DeviceDPI.(DeviceName))
+Set myScreen to the ScreenSize of ConnectionInfo()
+Setoptions (ShouldRepositionMouse:true, RepositionPoint:(683,384))
+wait 5
+
+// 내 컴퓨터 열기: 단축키 제어
+Click (683,384)
+TypeText WindowsKey, "e"
+wait 10
+TypeText AltKey,F4
+wait 5
+
+// 내 컴퓨터 속성 확인
+Click (683,384)
+Set the SearchRectangle to ((myScreen.x*.0, myScreen.y*0), (myScreen.x*.05, myScreen.y*1))
+If imageFound(image:"myComputer", waitFor:5) then RightClick FoundImageLocation()
+Set the SearchRectangle to empty
+wait 3
+Set the SearchRectangle to ((40,380),(260,405))
+If imageFound(text:"속성", Language:"Korean", waitFor:5) then Click FoundImageLocation()
+Set the SearchRectangle to empty
+wait 10
+
+// Windows 버전 읽기
+Log ReadText((370,205),(710,267))
+Put ReadText((370,205),(710,267)) into myProperty
+wait 10
+
+// 윈도우 닫기
+Set the SearchRectangle to ((myScreen.x*.6, myScreen.y*0), (myScreen.x*1, myScreen.y*.2))
+If imageFound(image:"closeWindow", waitFor:5) then Click FoundImageLocation()
+Set the SearchRectangle to empty
+wait 2
+Click (683,384)
+wait 5
+
+// 텍스트 읽고 쓰기
+Set the SearchRectangle to ((myScreen.x*.0, myScreen.y*0), (myScreen.x*.05, myScreen.y*1))
+If imageFound(text:"TypeText", waitFor:5) then DoubleClick FoundImageLocation() + (0,-20)
+Set the SearchRectangle to empty
+wait 5
+Click (190,230)
+wait 3
+TypeText enterKey
+TypeText "One Two Three Four Five", enterKey
+TypeText "1234567890", enterKey, enterKey
+wait 5
+
+Set the NextKeyDelay to 0.1
+TypeText "Looks like it's too fast...", enterKey
+TypeText "So adjusted to write slowly", enterKey
+TypeText myProperty, enterKey
+TypeText "Thanks for watching!"
+Set the NextKeyDelay to 0.01
+wait 5
+
+TypeText AltKey,F4
+wait 5
+Click (706,394)
+wait 5
+
+// 계산기 실행
+Set the SearchRectangle to ((myScreen.x*.0, myScreen.y*.95), (myScreen.x*.25, myScreen.y*1))
+If imageFound(image:"calc", waitFor:5) then Click FoundImageLocation()
+Set the SearchRectangle to empty
+wait 10
+
+Set the SearchRectangle to ((140,365), (335,525))
+Click (240,380)
+If imageFound(text:"1", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"2", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"3", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"4", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"5", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"6", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"7", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"8", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"9", Contrast:On, waitFor:5) then Click FoundImageLocation()
+If imageFound(text:"0", Contrast:On, waitFor:5) then Click FoundImageLocation()
+Set the SearchRectangle to empty
+wait 10
+Click (240,380)
+wait 2
+TypeText AltKey,F4
+wait 5

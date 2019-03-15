@@ -1,0 +1,28 @@
+﻿// 대화 상자를 통해 테스트 대상을 선택하는 방법
+(*)
+Answer "어떤 기기를 실행하시겠습니까?" with "Pixel2 (Android)" or "iPhone8 (iOS)" title "Select a mobile" timeout 30 seconds
+if it is "Pixel2 (Android)"
+	Connect "Pixel_2"
+	Log the Name of ConnectionInfo() && the ScreenSize of ConnectionInfo()
+	Run "10_Preconditions/10_HomeScreen"
+	Run "10_Preconditions/20_WiFiSettings"
+end if
+(/*)
+
+
+// 다른 모든 스크립트를 마스터 스크립트에서 실행
+Connect "Pixel_2"
+Log the Name of ConnectionInfo() && the ScreenSize of ConnectionInfo()
+
+Run "10_Preconditions/10_HomeScreen"
+Run "10_Preconditions/20_WiFiSettings"
+Run "20_YouTube/30_LaunchYouTube"
+Run "20_YouTube/40_SearchArtist"
+Run "20_YouTube/50_KillYouTube"
+Run "30_Browser/60_LaunchChrome"
+Run "30_Browser/70_WebBrowsing"
+Run "40_DataDrivenTest/90_ExcelFileHandling"
+Run "50_GmailAccess/99_GmailAccess"
+
+LogSuccess "모든 라이브 데모가 정상적으로 완료되었습니다."
+

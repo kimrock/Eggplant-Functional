@@ -1,0 +1,41 @@
+﻿// 안드로이드 모바일 && 지메일 연동된 계정이 있는 단말에서만 동작
+
+// Gmail 실행
+wait 2
+SwipeUp
+SwipeUp
+wait 2
+Click (image:"iconGmail", waitFor:0)
+wait 1
+
+
+// Gmail Inbox 접근
+If ImageFound(text:"Inbox", CaseSensitive:Yes, waitFor:10) then
+	Log "현재 위치는 Gmail inbox 입니다."
+	wait 3
+else
+	LogWarning "Inbox 위치가 아닙니다."
+	wait 3
+end If
+
+
+// 인박스 내 메일 확인
+Click (image:"iconGmailMenu", waitFor:5)
+Wait 3
+Set myInboxRectangle to ReadText(((710,530), (860,630)), Contrast:On, ValidPattern: "[0-9]")
+Log myInboxRectangle
+If myInboxRectangle is greater than 0
+	LogSuccess "오더 메일을 받았습니다, 해당 업무를 시작하십시오."
+	PressBackButton
+	wait 3
+else
+	Log "오더 메일이 없습니다. 다음 업무까지 대기하십시오."
+	PressBackButton
+	wait 3
+end If
+
+
+// 홈스크린 전환
+Run "10_Preconditions/10_HomeScreen"
+
+Log connectionInfo()

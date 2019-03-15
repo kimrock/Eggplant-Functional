@@ -1,0 +1,49 @@
+﻿// Twice 검색
+WaitFor 10, "iconYoutubeSearch"
+Tap FoundImageLocation()
+Wait 2
+
+If ImageFound("iconLeftArrow") then TypeText "Twice"
+Wait 2
+Tap (WaitFor:10, Image:"buttonSearch")
+Wait 3
+
+// 아티스트 믹스 찾아서 실행
+Tap (image:"logoYouTubeMix", waitFor:5)
+Wait 1
+Tap FoundImageLocation() -- additional code for Pixel2
+
+
+// 광고 스킵
+set myScreen to the ScreenSize of ConnectionInfo()
+set the searchRectangle to ((myScreen.x*.6, myScreen.y*.2), (myScreen.x, myScreen.y*.3))
+
+If ImageFound(text:"Skip ad", caseSensitive:Yes, waitfor:10)
+	Tap FoundImageLocation()
+	Log "광고를 제거했습니다.."
+else
+	Log "광고를 발견하지 못했습니다."
+end If
+set the searchRectangle to ()
+
+
+// 리스트 탐색 반복
+repeat 2 times
+	set the swipeSpeed to 2 -- 디폴트 40
+	Tap (myScreen.x*.5, myScreen.y*.7)
+	SwipeUp
+	set the swipeSpeed to 40
+	set the searchRectangle to ((myScreen.x*.6, myScreen.y*.2), (myScreen.x, myScreen.y*.3))
+	If imageFound(text:"Skip ad", caseSensitive:Yes, waitfor:10)
+		Tap FoundImageLocation()
+		Log "광고를 제거했습니다."
+	else
+		Log "광고를 발견하지 못했습니다."
+	end If
+	set the searchRectangle to ()
+	Wait 5
+end repeat
+
+LogSuccess "YouTube 플레이 데모 끝!"
+
+

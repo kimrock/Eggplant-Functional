@@ -1,0 +1,83 @@
+﻿// DPI, 화면비, 마우스 포인터 고정 설정
+Set DeviceName to the Name of ConnectionInfo()
+Set DeviceDPI to (Win7_Demo:"96") -- ePF 기본값 72, Windows7은 96
+Set the ReadTextSettings to (DPI:DeviceDPI.(DeviceName))
+Set myScreen to the ScreenSize of ConnectionInfo()
+Setoptions (ShouldRepositionMouse:true, RepositionPoint:(683,384))
+wait 5
+
+
+// 지메일 로그인
+// 크롬브라우저 실행된 상태에서 진행할 것
+Click (image:"chromeNewTab", waitFor:5)
+wait 5
+Set myScreen to the ScreenSize of ConnectionInfo()
+Set the SearchRectangle to ((myScreen.x*.6, myScreen.y*0), (myScreen.x*1, myScreen.y*.2))
+If imageFound(text:"Gmail", CaseSensitive:Yes, waitFor:5) then Click FoundImageLocation()
+// wait 2
+//Click (image:"gmailLogin", waitFor:10)
+Set the SearchRectangle to empty
+wait 5
+
+Set the NextKeyDelay to 0.1
+Set the scriptlogging to Silent
+TypeText "wstsc.kimrock"
+wait 3
+Click (image:"gmailNext", waitfor:5)
+wait 3
+TypeText "wise5958"
+wait 3
+Click (image:"gmailNext", waitfor:5)
+wait 3
+Set the scriptlogging to On
+
+// 로그인 확인
+If imageFound(image:"chromeReload", waitFor:10) and if imageFound(image:"gmailHeader", waitFor:10)
+	LogSuccess "지메일 실행 성공"
+	CaptureScreen (Name: "GmailSuccess")
+else
+	LogWarning "지메일 실행 실패"
+End If
+wait 5
+
+// 메일 보내기
+If imageFound(image:"gmailWriteNew", waitFor:5) then Click FoundImageLocation() + (30,0)
+wait 5
+TypeText "wstsc.kimrock", enterKey
+wait 3
+Click ImageLocation("gmailSend") + (0,-347)
+wait 3
+TypeText "EMAIL TEST"
+Click ImageLocation("gmailSend") + (0,-327)
+TypeText "Hi Rock, You've got an email"
+wait 3
+Click "gmailSend"
+Set the NextKeyDelay to 0.01
+wait 5
+
+// 지메일 로그아웃
+Click "gmailAccount"
+wait 3
+Click "gmailLogout"
+wait 5
+Click "gmailRegistered"
+wait 3
+Click "gmailDeleteAccount"
+wait 3
+Click "deleteCompletely"
+wait 3
+Click "yesDelete"
+wait 5
+
+// 반복 선택 기능
+repeat 5 times
+	Click (110,15)
+	wait 0.5
+	Click (340, 15)
+	wait 0.5
+end repeat
+
+// 창끄고 종료
+Click (1306,8)
+wait 5
+TypeText AltKey,F4

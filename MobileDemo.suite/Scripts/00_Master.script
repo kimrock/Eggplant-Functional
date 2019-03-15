@@ -1,0 +1,14 @@
+﻿// Run every single script at once, using 'Run' command
+(*Wait 1
+Log the Name of ConnectionInfo() && the ScreenSize of ConnectionInfo()
+
+Run "10_HomeScreen"
+Run "20_Settings"
+Run "30_LaunchYouTube"
+Run "40_SearchArtist"
+Run "50_KillYouTube"
+Run "60_WebBrowser"
+
+LogSuccess "모든 라이브 데모가 정상적으로 완료되었습니다."*)
+
+Run "Korean"

@@ -1,0 +1,83 @@
+﻿// DPI 설정: OCR 검색 최적화
+Set DeviceName to the Name of ConnectionInfo()
+Set DeviceDPI to (iPhone8:"326")
+Set the ReadTextSettings to (DPI:DeviceDPI.(DeviceName))
+Set myScreen to the ScreenSize of ConnectionInfo()
+Set the swipeSpeed to 5 -- 스와이프 속도가 너무 빠르므로 1/8로 다운그레이드 
+
+Log connectionInfo()
+
+
+// 설정 진입 (iPhone 8@iOS 12.1)
+Tap "iconSettings"
+wait 2
+
+// 일반 메뉴 진입 (스와이프 속도 조절)
+Repeat until ImageFound(text:"Touch", caseSensitive:Yes, contrast:On, waitFor:0)
+	SwipeUp
+	wait 0.5
+End Repeat
+wait 1
+Tap (text:"General", caseSensitive:Yes, contrast:On, waitFor:2)
+
+// 소프트웨어 버전 확인
+WaitFor 5, (text:"Software", caseSensitive:Yes, contrast:On)
+Tap FoundImageLocation()
+wait 1
+Log ReadText ((myScreen.x*.0, myScreen.y*.44), (myScreen.x, myScreen.y*.52))
+wait 2
+
+// 홈화면 전환
+PressHomeButton
+
+// 앱스토어 실행, 검색, 앱 다운로드
+Tap "icon_AppStore"
+wait 2
+If imageFound(text:"Search", caseSensitive:Yes, contrast:On, waitFor:5) then Tap FoundImageLocation() + (0,80)
+wait 1
+TypeText "Citi Bank", returnKey
+wait 2
+If imageFound(text:"Citibank KR", caseSensitive:Yes, contrast:On, waitFor:5) then Tap "icon_AppStoreDownload"
+wait 2
+If imageFound(text:"OPEN", caseSensitive:Yes, waitFor:20) then PressHomeButton
+
+
+// 앱 실행 (iPhone 8@iOS 12.1)
+Tap "icon_iOSCitiBankApp"
+
+// 억세스 허용 (절대 좌표 탭)
+Repeat 5 times
+	Tap (505, 825)
+	wait 1
+End Repeat
+wait 1
+
+// Get Started 선택
+Tap "button_GetStarted"
+
+// Terms & Conditions 확인
+Tap "button_Next"
+
+// Notice 팝업 처리 (화면 내에서 텍스트 검색 후 탭)
+If imageFound(text:"OK", caseSensitive:Yes, waitFor:5) then Tap FoundImageLocation()
+
+// 모두 동의 후 Next 버튼 탭
+If imageFound(text:"Agree", caseSensitive:Yes, waitFor:5) then Tap FoundImageLocation()
+wait 2
+Tap "button_Next"
+
+// 인증 단계 취소 후 메인 화면으로 진입
+Set the swipeSpeed to 5
+SwipeUp
+wait 1
+Set the SearchRectangle to ((myScreen.x*.05, myScreen.y*.81), (myScreen.x*.95, myScreen.y*.85))
+If imageFound(text:"Login", caseSensitive:Yes, waitFor:10) then Tap FoundImageLocation()
+Set the SearchRectangle to empty
+
+// 메뉴 화면 열고 메뉴 읽기
+If imageFound(image:"button_CitiBankAppMainMenu", waitFor:10) then Tap FoundImageLocation()
+wait 1
+Log ReadText ((myScreen.x*.02, myScreen.y*.12), (myScreen.x*.65, myScreen.y*.6))
+
+Tap "button_SignOn"
+If imageFound(image:"logo_CitiAppHeader", waitFor:10) then LogSuccess "Citi bank 앱이 정상 실행되었습니다."

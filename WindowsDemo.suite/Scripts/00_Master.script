@@ -1,0 +1,8 @@
+﻿// Suite 내 스크립트 일괄 실행
+Run "01_ConnectivitySetup"
+Run "02_WindowsPrograms"
+Run "03_WebBrowsing"
+Run "04_GmailAccess"
+
+LogSuccess "모든 스크립트를 정상 실행하였습니다."
+

@@ -1,0 +1,15 @@
+﻿// Chrome 실행 후 정상 실행 확인
+Tap (Waitfor:10, Image:"iconChrome")
+Wait 2
+
+Repeat until imageFound(image:"logoGoogle", waitFor:0)
+	Tap (image:"iconLeftArrow")
+	wait 1
+End repeat
+Log "Chrome 시작 화면입니다."
+
+
+// 크롬 검색창 접근
+WaitFor 10, (image:"iconSearchMic")
+Click FoundImageLocation() - (400,0)
+Wait 1

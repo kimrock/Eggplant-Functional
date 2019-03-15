@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2018-08-16 08:40:51 +0000";
+    CaptureHost = "Pixel 2";
+    CaptureScreenSize =     (
+        1080,
+        1920
+    );
+    HasAlpha = 1;
+    HotSpotX = 52;
+    HotSpotY = 38;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 87;
+    OriginalLocationY = 327;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    tags =     (
+    );
+}

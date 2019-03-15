@@ -1,0 +1,40 @@
+﻿// OCR 성능개선, DPI 최적화
+Set DeviceName to the Name of ConnectionInfo()
+Set DeviceDPI to (Rock_iPhone6S:"326")
+Set the ReadTextSettings to (DPI:DeviceDPI.(DeviceName))
+
+// Settings 실행
+Wait 1
+Tap "iconSettings"
+Wait 2
+
+
+// Wi-Fi 텍스트 찾아서 클릭
+WaitFor 10, text:"Wi-Fi", caseSensitive:Yes --contrast:On,
+Tap FoundImageLocation()
+Wait 2
+
+
+// Wi-Fi enable 인지 확인 and 현재 접속되어 있는 AP 읽고 로깅, iOS 최적화됨
+set myScreen to the ScreenSize of ConnectionInfo()
+set the searchRectangle to ((myScreen.x*.0, myScreen.y*.1), (myScreen.x, myScreen.y*.3))
+If ImageFound(text:"Wi-Fi", contrast:On, caseSensitive:Yes) and if ImageFound("buttonEnabled") then
+	LogSuccess ReadText((74,304),(555,359))&"에 접속되어 있습니다." -- optimized for iPhone8
+	//LogSuccess ReadText((187,347), (600,400))&"에 접속되어 있습니다." -- optimized for Pixel2
+End If
+Set the searchRectangle to empty
+Wait 2
+
+// Settings 화면으로 전환
+Waitfor 10, "buttonBack"
+Tap FoundImageLocation()
+Wait 2
+
+
+// 홈화면 전환 및 확인
+Run "10_HomeScreen"
+
+log connectionInfo()
+
+
+

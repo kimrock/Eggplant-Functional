@@ -1,0 +1,7 @@
+﻿// YouTube 실행 후 정상 실행 확인
+Tap (Waitfor:10, Image:"iconYouTube")
+Wait 5
+If imagefound("logoYoutube") then LogSuccess "YouTube 앱을 성공적으로 실행하였습니다."
+Wait 2
+
+

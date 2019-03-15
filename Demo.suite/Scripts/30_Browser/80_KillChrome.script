@@ -1,0 +1,11 @@
+﻿// 크롬 시작화면으로 전환
+Repeat until imageFound(image:"iconLeftArrow", waitFor:0)
+	SwipeDown
+	wait 1
+End Repeat
+wait 1
+
+Repeat until imageFound(image:"logoGoogle", waitFor:0)
+	Tap (image:"iconLeftArrow")
+	wait 1
+End repeat
