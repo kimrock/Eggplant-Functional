@@ -6,8 +6,8 @@
 
 ## 공식 온라인 트레이닝 코스, Certification
 * [온라인 트레이닝 코스](https://eggplant.io/training-and-certifications)
-* [Eggplant Functional Expert](https://eggplant.io/eggplant-functional-level-1)
-* [Eggplant Functional Genius](https://eggplant.io/eggplant-functional-level-2-genius)
+* [Eggplant Functional - Level 1 - Expert](https://eggplant.io/eggplant-functional-level-1)
+* [Eggplant Functional - Level 2 - Genius](https://eggplant.io/eggplant-functional-level-2-genius)
 
 ## 환경설정
 * 트라이얼 신청, 다운로드, 설치
