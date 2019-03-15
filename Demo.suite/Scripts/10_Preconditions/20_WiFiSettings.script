@@ -1,5 +1,4 @@
 ﻿// Settings 실행
-
 Wait 1
 Tap ("iconSettings")
 Wait 3
