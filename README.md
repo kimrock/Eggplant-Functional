@@ -11,7 +11,7 @@
 * PC 테스트 환경
 
 ## 스크립팅 가이드
-* 온라인 트레이닝 코스
+* 온라인 트레이닝 코스: https://eggplant.io/training-and-certifications
 
 ## 데모 스크립트
 * 모바일(app)
