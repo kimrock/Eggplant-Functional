@@ -1,4 +1,0 @@
-﻿2019-03-12 15:04:56.402 +0900	START		Running 30_LaunchYouTube.script
-2019-03-12 15:05:36.070 +0900	Exception	iconYouTube	No Image Found On Screen: "iconYouTube"	2	on_30_launchyoutube	30_LaunchYouTube.script
-2019-03-12 15:05:36.396 +0900	EndTestCase		(Duration:"39.993428", Errors:"1", Exceptions:"1", StartTime:"2019-03-12 15:04:56 +0900", Successes:"0", TestCase:"30_LaunchYouTube.script", Warnings:"0")
-2019-03-12 15:05:36.399 +0900	ABORTED		Execution Time 0:00:39 30_LaunchYouTube.script
