@@ -26,13 +26,13 @@
 ![오버뷰 이미지](https://user-images.githubusercontent.com/42508143/54477473-8acdc900-484b-11e9-851c-621d739b5183.png)
 1. iOS 기기에 접근하기 위해서는 사용자는 애플 개발자 프로그램 (Apple Developer Program)에 가입되어 있어야 합니다.
    * 이 문서에서는 애플 개발자 프로그램에 가입되어 있는 사용자를 기준으로 설명합니다.
-   * 참고: [애플 개발자 프로그램](https://developer.apple.com/kr/programs/) 둘러보기
+   * [애플 개발자 프로그램](https://developer.apple.com/kr/programs/) 살펴보기
 2. Xcode 실행
    * Xcode --> Preferences... --> Accounts: 애플 개발자 ID와 패스워드를 입력합니다.
    * Xcode는 사용자와 기기 인증 및 프로비저닝에 사용됩니다. Xcode에서 스크립팅 하지 않습니다.
 3. 애플 개발자 프로그램 웹사이트
-   * 애플 개발자 프로그램 웹사이트에 로그인합니다.
-   * 필요한 모든 설정을 위해서는 Admin 이상의 사용자 권한이 필요합니다. (Agent > Admin > 일반 유저 순서)
+   * 애플 개발자 프로그램 웹사이트에 로그인합니다. 필요한 모든 설정을 위해서는 Admin 이상의 사용자 권한이 필요합니다.
+   * 권한 순서: Agent (대표자) > Admin (중간 관리자) > Member (일반 사용자)
 ------
 ### Android 테스트 환경
 1. Android 기기 설정
