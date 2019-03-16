@@ -9,7 +9,7 @@
 [공식 웹사이트: 시작하기](http://docs.testplant.com/ePF/gettingstarted/epf-getting-started-eggplant-functional.htm)
 ------
 ### 설치환경
-[공식 웹사이트: 시스템 요구사항](http://docs.testplant.com/ePF/gettingstarted/epf-installing-eggplant-functional.htm)
+[공식 문서: 시스템 요구사항](http://docs.testplant.com/ePF/gettingstarted/epf-installing-eggplant-functional.htm)
 1. 최소사양
    * **64-bit OS만 지원합니다.**
    * Windows 10, Windows 8, Windows 7, Windows Server 2012, Windows Server 2008
@@ -38,18 +38,18 @@
 1. Android 기기 설정
    * 설정 --> 개발자 옵션 --> USB 디버깅 옵션 활성화 (Enable USB Debugging)
 2. Android Gateway를 통해 연결하는 방식 (In-direct way)
-   * [공식 문서](http://docs.testplant.com/ePF/using/epf-getting-started-android-gateway.htm)
+   * [공식 문서: 안드로이드 게이트웨이 연결](http://docs.testplant.com/ePF/using/epf-getting-started-android-gateway.htm)
    * Android 기기와 Eggplant Functional이 설치된 PC를 USB 케이블로 연결합니다.
    * PC 에서 Android Gateway와 Eggplant Functional을 실행합니다.
    * Android Gateway 기기 목록에 연결하려는 기기 이름이 표시되면 'Start' 버튼을 누릅니다.
    * 기기의 IP가 표시되면 해당 IP를 복사해서 Eggplant Functional의 'Connection List'에 추가합니다.
 3. Gateway를 통하지 않고 시리얼넘버를 인식하여 바로 연결하는 방식 (Direct way)
-   * [공식 문서](http://docs.testplant.com/ePF/using/epf-connecting-to-android-suts.htm)
+   * [공식 문서: 안드로이드 기기 직접 연결](http://docs.testplant.com/ePF/using/epf-connecting-to-android-suts.htm)
    * Android 기기와 Eggplant Functional이 설치된 PC를 USB 케이블로 연결합니다.
    * Eggplant Functional을 실행 --> Connecgion List --> Device Name 리스트 클릭
 ------
 ### PC 테스트 환경
-[공식 문서](http://docs.testplant.com/ePF/using/epf-desktop-suts.htm)
+[공식 문서: 데스크탑 연결](http://docs.testplant.com/ePF/using/epf-desktop-suts.htm)
 1. Windows PC
    * VNC Server 프로그램을 설치하세요.
    * UltraVNC, TightVNC를 권장합니다.
