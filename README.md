@@ -8,7 +8,8 @@
 #### 아래 이미지는 시뮬레이터가 아닌 Eggplant Functional에서 보여주는 실제 아이폰 화면과 스크립트 에디터 입니다.
 ![스크린샷](https://user-images.githubusercontent.com/42508143/54476640-02e3c100-4843-11e9-9bc9-049b0edfb730.png)
 
-### 아래 공식 웹사이트에서 더 자세한 내용과 30일 무료 트라이얼을 신청할 수 있습니다.
+### 아래 공식 웹사이트에서 더 자세한 내용을 확인하세요.
+### 'Try Eggplant' 버튼을 누르면 30일 무료 트라이얼 라이선스를 신청할 수 있는 웹 양식이 나옵니다.
 * [공식 웹사이트](https://eggplant.io/)
 * [제품 다운로드](https://eggplant.io/downloads)
 * [기술 문서](http://docs.testplant.com/eggplant-documentation-home.htm)
