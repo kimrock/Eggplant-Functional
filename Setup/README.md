@@ -10,35 +10,39 @@
 ------
 ### 설치환경
 1. 최소사양
-* **64-bit OS만 지원합니다.**
-* Windows 10, Windows 8, Windows 7, Windows Server 2012, Windows Server 2008
-* macOS 10.13, macOS 10.12. OS X 10.11, OS X 10.10, OS X 10.9
-* RAM: 4 GB or more, + 1 GB for each additional instance of Eggplant Functional
-* Processor: 1.5 GHz or faster
+   * **64-bit OS만 지원합니다.**
+   * Windows 10, Windows 8, Windows 7, Windows Server 2012, Windows Server 2008
+   * macOS 10.13, macOS 10.12. OS X 10.11, OS X 10.10, OS X 10.9
+   * RAM: 4 GB or more, + 1 GB for each additional instance of Eggplant Functional
+   * Processor: 1.5 GHz or faster
 2. 참고
-* RAM 8GB 이상이면 원활하게 사용할 수 있습니다.
-* 빠르고 안정적인 네트워크 환경을 권장합니다. (예: 유선, 100Mbps 이상)
-* 모바일 기기와의 통신은 기본적으로 TCP 5900번 포트를 사용합니다.
-* MacOS 기기에서는 iOS, Android, MacOS, Windows 기기에 모두 접근할 수 있으나, Windows 기기에서는 애플 정책에 의해 iOS와 MacOS 기기 접근이 제한됩니다.
+   * RAM 8GB 이상이면 원활하게 사용할 수 있습니다.
+   * 빠르고 안정적인 네트워크 환경을 권장합니다. (예: 유선, 100Mbps 이상)
+   * 모바일 기기와의 통신은 기본적으로 TCP 5900번 포트를 사용합니다.
+   * MacOS 기기에서는 iOS, Android, MacOS, Windows 기기에 모두 접근할 수 있으나, Windows 기기에서는 애플 정책에 의해 iOS와 MacOS 기기 접근이 제한됩니다.
 ------
 ### iOS 테스트 환경
 ! [오버뷰 이미지]
 1. iOS 기기에 접근하기 위해서는 사용자는 애플 개발자 프로그램 (Apple Developer Program)에 가입되어 있어야 합니다.
-2. 
+2. Xcode 실행
+   * Xcode --> Preferences... --> Accounts
 ------
 ### Android 테스트 환경
 1. Android 기기 설정
-* 설정 --> 개발자 옵션 --> USB 디버깅 옵션 활성화 (Enable USB Debugging)
+   * 설정 --> 개발자 옵션 --> USB 디버깅 옵션 활성화 (Enable USB Debugging)
 2. Android Gateway를 통해 연결하는 방식 (In-direct way)
-* [온라인 문서]
-* Android Gateway를 실행합니다.
+   * [온라인 문서]
+   * Android 기기와 Eggplant Functional이 설치된 PC를 USB 케이블로 연결합니다.
+   * PC 에서 Android Gateway와 Eggplant Functional을 실행합니다.
+   * Android Gateway 기기 목록에 연결하려는 기기 이름이 표시되면 'Start' 버튼을 누릅니다.
+   * 기기의 IP가 표시되면 해당 IP를 복사해서 Eggplant Functional의 'Connection List'에 추가합니다.
 3. Gateway를 통하지 않고 시리얼넘버를 인식하여 바로 연결하는 방식 (Direct way)
-*
-*
+   * Android 기기와 Eggplant Functional이 설치된 PC를 USB 케이블로 연결합니다.
+   * Eggplant Functional을 실행 --> Connecgion List --> Device Name 리스트 클릭
 ------
 ### PC 테스트 환경
 1. Windows PC
-* VNC Server 프로그램을 설치하세요.
-* UltraVNC, TightVNC를 권장합니다.
+   * VNC Server 프로그램을 설치하세요.
+   * UltraVNC, TightVNC를 권장합니다.
 2. MacOS
-* MacOS에 내장된 ScreenShare 기능을 권장합지다.
+   * MacOS에 내장된 ScreenShare 기능을 권장합니다.
