@@ -32,5 +32,4 @@
 * [데모 (모바일 app)](https://github.com/Kimrock/Eggplant-Functional/tree/master/DemoScript/DemoSuite.suite)
 * [모바일(app)](https://github.com/Kimrock/Eggplant-Functional/tree/master/DemoScript/MobileDemoSuite.suite)
 * [PC(web)](https://github.com/Kimrock/Eggplant-Functional/tree/master/DemoScript/WindowsSuite.suite)
-* _문제 해결 (트러블슈팅): under construction..._
-* _Best Practices: under construction..._
+* _문제 해결: under construction..._
