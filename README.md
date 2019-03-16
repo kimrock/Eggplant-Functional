@@ -15,10 +15,10 @@
 ------
 
 ## 공식 온라인 트레이닝 코스, Certification
-* 온라인 트레이닝 및 Certification 비용은 무료입니다.
 * [온라인 트레이닝 코스](https://eggplant.io/training-and-certifications)
 * [Eggplant Functional - Level 1 - Expert](https://eggplant.io/eggplant-functional-level-1)
 * [Eggplant Functional - Level 2 - Genius](https://eggplant.io/eggplant-functional-level-2-genius)
+* 온라인 트레이닝 코스 및 Certification 비용은 무료입니다.
 
 ## 환경설정
 * [트라이얼 신청, 다운로드, 설치](https://github.com/Kimrock/Eggplant-Functional/tree/master/Setup#%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%96%BC-%EC%8B%A0%EC%B2%AD-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EC%84%A4%EC%B9%98)
