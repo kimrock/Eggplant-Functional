@@ -14,10 +14,10 @@
 * [Eggplant Functional - Level 2 - Genius](https://eggplant.io/eggplant-functional-level-2-genius)
 
 ## 환경설정
-* 트라이얼 신청, 다운로드, 설치
-* iOS 테스트 환경
-* Android 테스트 환경
-* PC 테스트 환경
+* [트라이얼 신청, 다운로드, 설치](https://github.com/Kimrock/Eggplant-Functional/tree/master/Setup#%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%96%BC-%EC%8B%A0%EC%B2%AD-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EC%84%A4%EC%B9%98)
+* [iOS 테스트 환경](https://github.com/Kimrock/Eggplant-Functional/tree/master/Setup#ios-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%99%98%EA%B2%BD)
+* [Android 테스트 환경](https://github.com/Kimrock/Eggplant-Functional/tree/master/Setup#android-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%99%98%EA%B2%BD)
+* [PC 테스트 환경](https://github.com/Kimrock/Eggplant-Functional/tree/master/Setup#pc-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%99%98%EA%B2%BD)
 
 ## 데모 스크립트
 * 모바일(app)
