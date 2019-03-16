@@ -23,7 +23,7 @@
    * MacOS 기기에서는 iOS, Android, MacOS, Windows 기기에 모두 접근할 수 있으나, Windows 기기에서는 애플 정책에 의해 iOS와 MacOS 기기 접근이 제한됩니다.
 ------
 ### iOS 테스트 환경
-! [오버뷰 이미지](https://user-images.githubusercontent.com/42508143/54477473-8acdc900-484b-11e9-851c-621d739b5183.png)
+![오버뷰 이미지](https://user-images.githubusercontent.com/42508143/54477473-8acdc900-484b-11e9-851c-621d739b5183.png)
 1. iOS 기기에 접근하기 위해서는 사용자는 애플 개발자 프로그램 (Apple Developer Program)에 가입되어 있어야 합니다.
    * 이 문서에서는 애플 개발자 프로그램에 가입되어 있는 사용자를 기준으로 설명합니다.
    * 참고: [애플 개발자 프로그램](https://developer.apple.com/kr/programs/) 둘러보기
