@@ -9,13 +9,13 @@
 [공식 웹사이트: 시작하기](http://docs.testplant.com/ePF/gettingstarted/epf-getting-started-eggplant-functional.htm)
 ------
 ### 설치환경
+[공식 웹사이트: 시스템 요구사항](http://docs.testplant.com/ePF/gettingstarted/epf-installing-eggplant-functional.htm)
 1. 최소사양
    * **64-bit OS만 지원합니다.**
    * Windows 10, Windows 8, Windows 7, Windows Server 2012, Windows Server 2008
    * macOS 10.13, macOS 10.12. OS X 10.11, OS X 10.10, OS X 10.9
    * RAM: 4 GB or more, + 1 GB for each additional instance of Eggplant Functional
    * Processor: 1.5 GHz or faster
-   * [공식 웹사이트: 시스템 요구사항](http://docs.testplant.com/ePF/gettingstarted/epf-installing-eggplant-functional.htm)
 2. 참고
    * RAM 8GB 이상이면 원활하게 사용할 수 있습니다.
    * 빠르고 안정적인 네트워크 환경을 권장합니다. (예: 유선, 100Mbps 이상)
@@ -23,7 +23,7 @@
    * MacOS 기기에서는 iOS, Android, MacOS, Windows 기기에 모두 접근할 수 있으나, Windows 기기에서는 애플 정책에 의해 iOS와 MacOS 기기 접근이 제한됩니다.
 ------
 ### iOS 테스트 환경
-! [오버뷰 이미지]()
+! [오버뷰 이미지](https://user-images.githubusercontent.com/42508143/54477473-8acdc900-484b-11e9-851c-621d739b5183.png)
 1. iOS 기기에 접근하기 위해서는 사용자는 애플 개발자 프로그램 (Apple Developer Program)에 가입되어 있어야 합니다.
    * 이 문서에서는 애플 개발자 프로그램에 가입되어 있는 사용자를 기준으로 설명합니다.
    * 참고: [애플 개발자 프로그램](https://developer.apple.com/kr/programs/) 둘러보기
