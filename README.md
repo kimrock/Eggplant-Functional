@@ -29,7 +29,8 @@
 * [PC 테스트 환경](https://github.com/Kimrock/Eggplant-Functional/tree/master/Setup#pc-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%99%98%EA%B2%BD)
 
 ## 데모 스크립트
-* 모바일(app)
-* PC(web)
-* 문제 해결 (트러블슈팅)
-* Best Practices
+* [데모 (모바일 app)](https://github.com/Kimrock/Eggplant-Functional/tree/master/DemoScript/DemoSuite.suite)
+* [모바일(app)](https://github.com/Kimrock/Eggplant-Functional/tree/master/DemoScript/MobileDemoSuite.suite)
+* [PC(web)](https://github.com/Kimrock/Eggplant-Functional/tree/master/DemoScript/WindowsSuite.suite)
+* _문제 해결 (트러블슈팅): under construction..._
+* _Best Practices: under construction..._
