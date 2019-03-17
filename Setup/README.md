@@ -13,7 +13,8 @@
 4. 모바일 기기(iOS, Android) 연결을 위해서는 [모바일 게이트웨이 프로그램](https://eggplant.io/mobile-gateways)도 다운로드 합니다.
 5. 다운로드된 인스톨러를 실행하면 일반적인 프로그램 설치 과정과 동일하게 설치됩니다.
 6. 처음 실행 시 아래 이미지와 같은 라이선스 창이 표시됩니다. 지급된 라이선스 키만 입력하고 'Add' 누르면 활성화 됩니다.  
-![licensing img](https://user-images.githubusercontent.com/42508143/54485799-c788d700-48c2-11e9-8f75-1d7ddd154dcc.png)  
+  
+![licensing img](https://user-images.githubusercontent.com/42508143/54485799-c788d700-48c2-11e9-8f75-1d7ddd154dcc.png)
 ------
 
 ### 설치환경
@@ -50,7 +51,7 @@
       * 최초 연결시 몇 분 정도 소요될 수 있습니다. 기기 정보가 아래 이미지와 같이 에러없이 표시되면 정상입니다.  
       
 ![xcode window img](https://user-images.githubusercontent.com/42508143/54486181-e047bb80-48c7-11e9-9df7-3b90fd99eb81.png)  
-        
+    
 3. 애플 개발자 프로그램
    * 애플 개발자 프로그램 웹사이트에 로그인합니다. 필요한 모든 설정을 위해서는 Admin 이상의 사용자 권한이 필요합니다.
    * 권한 순서: Agent (대표자) > Admin (중간 관리자) > Member (일반 사용자)
