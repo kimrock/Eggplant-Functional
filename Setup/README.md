@@ -32,7 +32,8 @@
 ------
 
 ### iOS 테스트 환경
-![overview img](https://user-images.githubusercontent.com/42508143/54477473-8acdc900-484b-11e9-851c-621d739b5183.png)  
+![overview img](https://user-images.githubusercontent.com/42508143/54477473-8acdc900-484b-11e9-851c-621d739b5183.png) 
+  
 1. iOS 기기에 접근하기 위해서는 사용자는 애플 개발자 프로그램 (Apple Developer Program)에 가입되어 있어야 합니다.
    * 이 문서에서는 애플 개발자 프로그램에 가입되어 있는 사용자를 기준으로 설명합니다.
    * [애플 개발자 프로그램](https://developer.apple.com/kr/programs/) 살펴보기
@@ -41,16 +42,20 @@
 2. Xcode 설정
    * Xcode --> Preferences... --> Accounts: 애플 개발자 ID와 패스워드를 입력합니다.
       * Xcode는 사용자와 기기 인증 및 프로비저닝에만 사용됩니다. Xcode에서 코딩이나 스크립트 편집을 하지 않습니다.  
+      
 ![xcode img](https://user-images.githubusercontent.com/42508143/54485847-81804300-48c3-11e9-877d-829761420c50.png)  
+
    * Xcode --> Windows --> Devices and Simulators
       * 테스트에 사용할 iOS 기기를 맥에 연결하고 Xcode에서 확인합니다.
       * 최초 연결시 몇 분 정도 소요될 수 있습니다. 기기 정보가 아래 이미지와 같이 에러없이 표시되면 정상입니다.  
+      
 ![xcode window img](https://user-images.githubusercontent.com/42508143/54486181-e047bb80-48c7-11e9-9df7-3b90fd99eb81.png)  
         
 3. 애플 개발자 프로그램
    * 애플 개발자 프로그램 웹사이트에 로그인합니다. 필요한 모든 설정을 위해서는 Admin 이상의 사용자 권한이 필요합니다.
    * 권한 순서: Agent (대표자) > Admin (중간 관리자) > Member (일반 사용자)
    * 아래 이미지는 개인 자격으로 애플 개발자 프로그램에 가입한 예제입니다.  
+   
 ![apple dev website img](https://user-images.githubusercontent.com/42508143/54485976-1899ca80-48c5-11e9-8dc7-7bf3d795338b.png)  
   
 3-1. Certificates, Identifiers & Profiles
@@ -66,22 +71,28 @@
    * 팀(조직/회사)마다 처음 한번만 등록해두면 됩니다.
    * App ID 이름은 자유롭게 적용하면 되고, 실제 ID는 **com.testplant.*** 일치해야 합니다.
    * 개발 목적으로 등록하는 App ID 이므로, 실제 적용되는 ID는 *<team ID.com.testplant.*>* 처럼 적용됩니다.  
+   
 ![App ID img](https://user-images.githubusercontent.com/42508143/54486270-4b45c200-48c9-11e9-917b-7071635039a5.png)  
 
 3-3. Devices
    * 테스트에 사용할 iOS 기기를 등록합니다. 기기명과 UDID (Unique Device Identifier)만 입력하면 됩니다.  
+   
 ![Add device img](https://user-images.githubusercontent.com/42508143/54486431-95c83e00-48cb-11e9-9d04-00febdeb2c79.png)  
 
 3-4. Provisioning Profiles
    * 이전 단계에서 등록한 Certificate, AppID, Device를 모두 합쳐서 프로비저닝 프로파일을 생성하는 단계입니다.
    * Add 버튼 (+) 클릭 후 아래 이미지와 같이 'iOS App Development'를 선택하고 다음 단계로 넘어갑니다.  
+   
 ![Add Provisioning](https://user-images.githubusercontent.com/42508143/54486502-92818200-48cc-11e9-9211-b75f3e9a9f02.png)  
+  
    * 이전 단계에서 등록한 App ID를 선택하고 다음 단계로 넘어갑니다.
    * 앞으로 Eggplant Functional을 사용할 멤버의 Certificate를 선택하고 다음 단계로 넘어갑니다.
    * 이전 단계에서 등록한 iOS 기기를 선택하고 다음 단계로 넘어갑니다.
    * 프로파일 이름을 입력하고 Generate 버튼 누르면 생성됩니다.
    * 아래 이미지는 제 프로비저닝 프로파일입니다. 이미지처럼 Status: Active로 표시되어야 정상입니다.  
+   
 ![Provisioning Done](https://user-images.githubusercontent.com/42508143/54486588-82b66d80-48cd-11e9-8d69-6ce1f1aecfde.png)  
+  
    * 생성된 프로비저닝 프로파일을 다운로드 후, 더블클릭하면 Keychain Access에 자동 등록됩니다.
 
 ------
