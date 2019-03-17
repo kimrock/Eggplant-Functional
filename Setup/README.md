@@ -35,16 +35,35 @@
    * 이 문서에서는 애플 개발자 프로그램에 가입되어 있는 사용자를 기준으로 설명합니다.
    * [애플 개발자 프로그램](https://developer.apple.com/kr/programs/) 살펴보기
    * **중요: iOS, MacOS, tvOS 기기에 접근하려면 해당 기기, MacOS, 애플개발자 ID 세 가지가 모두 필요합니다.**
-2. Xcode 실행
+   
+2. Xcode 설정
    * Xcode --> Preferences... --> Accounts: 애플 개발자 ID와 패스워드를 입력합니다.
-   * Xcode는 사용자와 기기 인증 및 프로비저닝에만 사용됩니다. Xcode에서 코딩이나 스크립트 편집을 하지 않습니다.
+      * Xcode는 사용자와 기기 인증 및 프로비저닝에만 사용됩니다. Xcode에서 코딩이나 스크립트 편집을 하지 않습니다.
    * ![xcode img](https://user-images.githubusercontent.com/42508143/54485847-81804300-48c3-11e9-877d-829761420c50.png)
+   * Xcode --> Windows --> Devices and Simulators
+      * 테스트에 사용할 iOS 기기를 맥에 연결하고 Xcode에서 확인합니다.
+      * 최초 연결시 몇 분 정도 소요될 수 있습니다. 기기 정보가 아래 이미지와 같이 에러없이 표시되면 정상입니다.
+      * ![xcode window img](https://user-images.githubusercontent.com/42508143/54486181-e047bb80-48c7-11e9-9df7-3b90fd99eb81.png)
+      
 3. 애플 개발자 프로그램 웹사이트
    * 애플 개발자 프로그램 웹사이트에 로그인합니다. 필요한 모든 설정을 위해서는 Admin 이상의 사용자 권한이 필요합니다.
    * 권한 순서: Agent (대표자) > Admin (중간 관리자) > Member (일반 사용자)
    * 아래 이미지는 개인 자격으로 애플 개발자 프로그램에 가입한 예제입니다.
    * ![apple dev website img](https://user-images.githubusercontent.com/42508143/54485976-1899ca80-48c5-11e9-8dc7-7bf3d795338b.png)
-   *
+   
+   * Certificates, Identifiers & Profiles
+      * Certificate를 생성/등록하는 단계 입니다. 사용자와 맥 장비를 인증/등록하는 과정입니다.
+      * 우측 상단의 + 버튼을 눌러서 새로운 Certificate 등록을 시작합니다.
+      * Development > iOS App Development 항목을 선택하고 다음 단계로 넘어갑니다. 아랫쪽 Production 항목은 선택하지 않습니다.
+      * CSR 등록 단계입니다. 화면의 안내에 따라 맥 > 유틸리티 > Keychain Access 앱에서 CSR 파일을 생성해줍니다.
+      * 생성된 CSR 파일을 애플 개발자 웹사이트에 업로드 합니다.
+      * 등록 완료된 Certificate 파일을 다운로드 후, 더블클릭하면 Keychain Access에 자동 등록됩니다.
+   * App ID
+      * Eggplant Functional을 위한 App ID를 등록하는 과정입니다.
+      * 팀(조직/회사)마다 처음 한번만 등록해두면 됩니다.
+      * App ID 이름은 자유롭게 적용하면 되고, 실제 ID는 **com.testplant.*** 일치해야 합니다.
+      * 개발 목적으로 등록하는 App ID 이므로, 실제 적용되는 ID는 *<team ID.com.testplant.*>* 와 같이 적용됩니다.
+      * ![App ID img](https://user-images.githubusercontent.com/42508143/54486270-4b45c200-48c9-11e9-917b-7071635039a5.png)
 ------
 
 ### Android 테스트 환경
