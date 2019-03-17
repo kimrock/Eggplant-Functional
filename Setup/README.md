@@ -116,8 +116,8 @@
 ### Android 테스트 환경
 1. Android 기기 설정
    * 설정 --> 개발자 옵션 --> USB 디버깅 옵션 활성화 (Enable USB Debugging)
-   * 일부 안드로이드 기기에서는 통신 모드에 따라 연결이 잘 되지 않을 수 있습니다. 이 경우 USB 통신 모드를 #P2P# 모드로 설정해보세요.
-   * Windows 환경에서는 Android 기기가 자동 인식되지 않고 제조사에서 배포하는 USB 드라이버가 필요할 수 있습니다. 다운로드 후 설치하세요.
+   * Windows 환경에서는 Android 기기가 자동 인식되지 않고 제조사에서 배포하는 USB 드라이버가 필요할 수 있습니다.
+   * 일부 안드로이드 기기에서 연결이 원활하지 않을 경우, USB 통신 모드를 **P2P** 모드로 설정해보세요.
 
 2. Android Gateway를 통해 연결하는 방식 (In-direct way)
    * [공식 문서: 안드로이드 게이트웨이 연결](http://docs.testplant.com/ePF/using/epf-getting-started-android-gateway.htm)
