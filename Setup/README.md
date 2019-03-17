@@ -1,4 +1,7 @@
 ## Eggplant Functional 환경설정
+###### Eggplant Functional을 시작하는데 필요한 환경설정을 요점만 한글로 정리했습니다.
+###### 가장 오래 걸리는 iOS 기기 테스트 환경구성은 되도록 풀어서 설명했습니다.
+
 ------
 
 ### 트라이얼 신청, 다운로드, 설치
@@ -45,7 +48,7 @@
       * 최초 연결시 몇 분 정도 소요될 수 있습니다. 기기 정보가 아래 이미지와 같이 에러없이 표시되면 정상입니다.
 ![xcode window img](https://user-images.githubusercontent.com/42508143/54486181-e047bb80-48c7-11e9-9df7-3b90fd99eb81.png)
       
-3. 애플 개발자 프로그램 웹사이트
+3. 애플 개발자 프로그램
    * 애플 개발자 프로그램 웹사이트에 로그인합니다. 필요한 모든 설정을 위해서는 Admin 이상의 사용자 권한이 필요합니다.
    * 권한 순서: Agent (대표자) > Admin (중간 관리자) > Member (일반 사용자)
    * 아래 이미지는 개인 자격으로 애플 개발자 프로그램에 가입한 예제입니다.
@@ -63,8 +66,25 @@
    * Eggplant Functional을 위한 App ID를 등록하는 과정입니다.
    * 팀(조직/회사)마다 처음 한번만 등록해두면 됩니다.
    * App ID 이름은 자유롭게 적용하면 되고, 실제 ID는 **com.testplant.*** 일치해야 합니다.
-   * 개발 목적으로 등록하는 App ID 이므로, 실제 적용되는 ID는 *<team ID.com.testplant.*>* 와 같이 적용됩니다.
+   * 개발 목적으로 등록하는 App ID 이므로, 실제 적용되는 ID는 *<team ID.com.testplant.*>* 처럼 적용됩니다.
 ![App ID img](https://user-images.githubusercontent.com/42508143/54486270-4b45c200-48c9-11e9-917b-7071635039a5.png)
+
+3-3. Devices
+   * 테스트에 사용할 iOS 기기를 등록합니다. 기기명과 UDID (Unique Device Identifier)만 입력하면 됩니다.
+![Add device img](https://user-images.githubusercontent.com/42508143/54486431-95c83e00-48cb-11e9-9d04-00febdeb2c79.png)
+
+3-4. Provisioning Profiles
+   * 이전 단계에서 등록한 Certificate, AppID, Device를 모두 합쳐서 프로비저닝 프로파일을 생성하는 단계입니다.
+   * Add 버튼 (+) 클릭 후 아래 이미지와 같이 'iOS App Development'를 선택하고 다음 단계로 넘어갑니다.
+![Add Provisioning](https://user-images.githubusercontent.com/42508143/54486502-92818200-48cc-11e9-9211-b75f3e9a9f02.png)
+   * 이전 단계에서 등록한 App ID를 선택하고 다음 단계로 넘어갑니다.
+   * 앞으로 Eggplant Functional을 사용할 멤버의 Certificate를 선택하고 다음 단계로 넘어갑니다.
+   * 이전 단계에서 등록한 iOS 기기를 선택하고 다음 단계로 넘어갑니다.
+   * 프로파일 이름을 입력하고 Generate 버튼 누르면 생성됩니다.
+   * 아래 이미지는 제 프로비저닝 프로파일입니다. 이미지처럼 Status: Active로 표시되어야 정상입니다.
+![Provisioning Done](https://user-images.githubusercontent.com/42508143/54486588-82b66d80-48cd-11e9-8d69-6ce1f1aecfde.png)
+   * 생성된 프로비저닝 프로파일을 다운로드 후, 더블클릭하면 Keychain Access에 자동 등록됩니다.
+
 ------
 
 ### Android 테스트 환경
