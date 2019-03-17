@@ -1,6 +1,6 @@
 ## Eggplant Functional 환경설정
-
 ------
+
 ### 트라이얼 신청, 다운로드, 설치
 [공식 웹사이트: 시작하기](http://docs.testplant.com/ePF/gettingstarted/epf-getting-started-eggplant-functional.htm)
 1. Eggplant Functional은 상용(유료) 제품입니다. 트라이얼 버전도 30일 제한만 있을 뿐 기능은 동일합니다.
@@ -39,47 +39,51 @@
 2. Xcode 설정
    * Xcode --> Preferences... --> Accounts: 애플 개발자 ID와 패스워드를 입력합니다.
       * Xcode는 사용자와 기기 인증 및 프로비저닝에만 사용됩니다. Xcode에서 코딩이나 스크립트 편집을 하지 않습니다.
-   * ![xcode img](https://user-images.githubusercontent.com/42508143/54485847-81804300-48c3-11e9-877d-829761420c50.png)
+![xcode img](https://user-images.githubusercontent.com/42508143/54485847-81804300-48c3-11e9-877d-829761420c50.png)
    * Xcode --> Windows --> Devices and Simulators
       * 테스트에 사용할 iOS 기기를 맥에 연결하고 Xcode에서 확인합니다.
       * 최초 연결시 몇 분 정도 소요될 수 있습니다. 기기 정보가 아래 이미지와 같이 에러없이 표시되면 정상입니다.
-      * ![xcode window img](https://user-images.githubusercontent.com/42508143/54486181-e047bb80-48c7-11e9-9df7-3b90fd99eb81.png)
+![xcode window img](https://user-images.githubusercontent.com/42508143/54486181-e047bb80-48c7-11e9-9df7-3b90fd99eb81.png)
       
 3. 애플 개발자 프로그램 웹사이트
    * 애플 개발자 프로그램 웹사이트에 로그인합니다. 필요한 모든 설정을 위해서는 Admin 이상의 사용자 권한이 필요합니다.
    * 권한 순서: Agent (대표자) > Admin (중간 관리자) > Member (일반 사용자)
    * 아래 이미지는 개인 자격으로 애플 개발자 프로그램에 가입한 예제입니다.
-   * ![apple dev website img](https://user-images.githubusercontent.com/42508143/54485976-1899ca80-48c5-11e9-8dc7-7bf3d795338b.png)
+![apple dev website img](https://user-images.githubusercontent.com/42508143/54485976-1899ca80-48c5-11e9-8dc7-7bf3d795338b.png)
    
-   * Certificates, Identifiers & Profiles
-      * Certificate를 생성/등록하는 단계 입니다. 사용자와 맥 장비를 인증/등록하는 과정입니다.
-      * 우측 상단의 + 버튼을 눌러서 새로운 Certificate 등록을 시작합니다.
-      * Development > iOS App Development 항목을 선택하고 다음 단계로 넘어갑니다. 아랫쪽 Production 항목은 선택하지 않습니다.
-      * CSR 등록 단계입니다. 화면의 안내에 따라 맥 > 유틸리티 > Keychain Access 앱에서 CSR 파일을 생성해줍니다.
-      * 생성된 CSR 파일을 애플 개발자 웹사이트에 업로드 합니다.
-      * 등록 완료된 Certificate 파일을 다운로드 후, 더블클릭하면 Keychain Access에 자동 등록됩니다.
-   * App ID
-      * Eggplant Functional을 위한 App ID를 등록하는 과정입니다.
-      * 팀(조직/회사)마다 처음 한번만 등록해두면 됩니다.
-      * App ID 이름은 자유롭게 적용하면 되고, 실제 ID는 **com.testplant.*** 일치해야 합니다.
-      * 개발 목적으로 등록하는 App ID 이므로, 실제 적용되는 ID는 *<team ID.com.testplant.*>* 와 같이 적용됩니다.
-      * ![App ID img](https://user-images.githubusercontent.com/42508143/54486270-4b45c200-48c9-11e9-917b-7071635039a5.png)
+3-1. Certificates, Identifiers & Profiles
+   * Certificate를 생성/등록하는 단계 입니다. 사용자와 맥 장비를 인증/등록하는 과정입니다.
+   * 우측 상단의 + 버튼을 눌러서 새로운 Certificate 등록을 시작합니다.
+   * Development > iOS App Development 항목을 선택하고 다음 단계로 넘어갑니다. 아랫쪽 Production 항목은 선택하지 않습니다.
+   * CSR 등록 단계입니다. 화면의 안내에 따라 맥 > 유틸리티 > Keychain Access 앱에서 CSR 파일을 생성해줍니다.
+   * 생성된 CSR 파일을 애플 개발자 웹사이트에 업로드 합니다.
+   * 등록 완료된 Certificate 파일을 다운로드 후, 더블클릭하면 Keychain Access에 자동 등록됩니다.
+   
+3-2. App ID
+   * Eggplant Functional을 위한 App ID를 등록하는 과정입니다.
+   * 팀(조직/회사)마다 처음 한번만 등록해두면 됩니다.
+   * App ID 이름은 자유롭게 적용하면 되고, 실제 ID는 **com.testplant.*** 일치해야 합니다.
+   * 개발 목적으로 등록하는 App ID 이므로, 실제 적용되는 ID는 *<team ID.com.testplant.*>* 와 같이 적용됩니다.
+![App ID img](https://user-images.githubusercontent.com/42508143/54486270-4b45c200-48c9-11e9-917b-7071635039a5.png)
 ------
 
 ### Android 테스트 환경
 1. Android 기기 설정
    * 설정 --> 개발자 옵션 --> USB 디버깅 옵션 활성화 (Enable USB Debugging)
+
 2. Android Gateway를 통해 연결하는 방식 (In-direct way)
    * [공식 문서: 안드로이드 게이트웨이 연결](http://docs.testplant.com/ePF/using/epf-getting-started-android-gateway.htm)
    * Android 기기와 Eggplant Functional이 설치된 PC를 USB 케이블로 연결합니다.
    * PC 에서 Android Gateway와 Eggplant Functional을 실행합니다.
    * Android Gateway 기기 목록에 연결하려는 기기 이름이 표시되면 'Start' 버튼을 누릅니다.
    * 기기의 IP가 표시되면 해당 IP를 복사해서 Eggplant Functional의 'Connection List'에 추가합니다.
+
 3. Gateway를 통하지 않고 시리얼넘버를 인식하여 바로 연결하는 방식 (Direct way)
    * [공식 문서: 안드로이드 기기 직접 연결](http://docs.testplant.com/ePF/using/epf-connecting-to-android-suts.htm)
    * Android 기기와 Eggplant Functional이 설치된 PC를 USB 케이블로 연결합니다.
    * Eggplant Functional을 실행 --> Connecgion List --> Device Name 리스트 클릭
 ------
+
 ### PC 테스트 환경
 [공식 문서: 데스크탑 연결](http://docs.testplant.com/ePF/using/epf-desktop-suts.htm)
 1. Windows PC
