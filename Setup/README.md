@@ -95,24 +95,47 @@
 ![Provisioning Done](https://user-images.githubusercontent.com/42508143/54486588-82b66d80-48cd-11e9-8d69-6ce1f1aecfde.png)  
   
    * 생성된 프로비저닝 프로파일을 다운로드 후, 더블클릭하면 Keychain Access에 자동 등록됩니다.
+   
+3-3. iOS Gateway
+   * [공식 문서: iOS 게이트웨이 연결](http://docs.testplant.com/ePF/using/epf-getting-started-ios-gateway.htm)
+   * iOS Gateway 실행 --> iOSGateway --> Preferences... --> 애플 개발자 아이디와 패스워드 입력
+  
+![iOS Gateway Preferences img](https://user-images.githubusercontent.com/42508143/54486997-64537080-48d3-11e9-92e3-acd2c5502536.png)
+  
+   * iOS 기기와 Eggplant Functional이 설치된 맥을 USB 케이블로 연결합니다.  
+  
+![iOS Gateway Main img](https://user-images.githubusercontent.com/42508143/54487042-ef346b00-48d3-11e9-9ac7-032614bc5131.png)  
+  
+   * Start 버튼을 누르면 VNC 서버가 실행됩니다. iOS의 기기 정보와 화면을 Eggplant Functional로 전달하는 역할을 합니다.
+   * Eggplant Functional 실행 후 Connection List에서 iOS 기기를 확인할 수 있습니다.  
+   
+![connection list img](https://user-images.githubusercontent.com/42508143/54487085-ae892180-48d4-11e9-8956-15acd0efc733.png)  
 
 ------
 
 ### Android 테스트 환경
 1. Android 기기 설정
    * 설정 --> 개발자 옵션 --> USB 디버깅 옵션 활성화 (Enable USB Debugging)
+   * 일부 안드로이드 기기에서는 통신 모드에 따라 연결이 잘 되지 않을 수 있습니다. 이 경우 USB 통신 모드를 #P2P# 모드로 설정해보세요.
+   * Windows 환경에서는 Android 기기가 자동 인식되지 않고 제조사에서 배포하는 USB 드라이버가 필요할 수 있습니다. 다운로드 후 설치하세요.
 
 2. Android Gateway를 통해 연결하는 방식 (In-direct way)
    * [공식 문서: 안드로이드 게이트웨이 연결](http://docs.testplant.com/ePF/using/epf-getting-started-android-gateway.htm)
    * Android 기기와 Eggplant Functional이 설치된 PC를 USB 케이블로 연결합니다.
    * PC 에서 Android Gateway와 Eggplant Functional을 실행합니다.
    * Android Gateway 기기 목록에 연결하려는 기기 이름이 표시되면 'Start' 버튼을 누릅니다.
+   
+![Android In-direct way img](https://user-images.githubusercontent.com/42508143/54486960-f444ea80-48d2-11e9-96c2-8c31ec664dfb.png)
+  
    * 기기의 IP가 표시되면 해당 IP를 복사해서 Eggplant Functional의 'Connection List'에 추가합니다.
 
 3. Gateway를 통하지 않고 시리얼넘버를 인식하여 바로 연결하는 방식 (Direct way)
    * [공식 문서: 안드로이드 기기 직접 연결](http://docs.testplant.com/ePF/using/epf-connecting-to-android-suts.htm)
    * Android 기기와 Eggplant Functional이 설치된 PC를 USB 케이블로 연결합니다.
-   * Eggplant Functional을 실행 --> Connecgion List --> Device Name 리스트 클릭
+   * Eggplant Functional을 실행 --> Connecgion List --> Server 드롭다운 메뉴 --> 기기 선택
+   
+![Android Direct way img](https://user-images.githubusercontent.com/42508143/54486931-9dd7ac00-48d2-11e9-8ae1-1102a63400cd.png)  
+  
 ------
 
 ### PC 테스트 환경
