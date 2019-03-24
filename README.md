@@ -1,5 +1,5 @@
-### GUI 자동화 도구인 Eggplant Functional을 설명합니다.  
-   * 다운로드, 환경설정은 [Wiki 페이지](https://github.com/Kimrock/Eggplant-Functional/wiki/Eggplant-Functional)를 참고하세요.
+## GUI 자동화 도구인 Eggplant Functional 스크립트를 공유합니다.  
+## 다운로드, 환경설정은 [Wiki 페이지](https://github.com/Kimrock/Eggplant-Functional/wiki/Eggplant-Functional)를 참고하세요.
 ![screenshot img](https://user-images.githubusercontent.com/42508143/54476640-02e3c100-4843-11e9-9bc9-049b0edfb730.png)
 ------
 ### 공식 웹사이트
