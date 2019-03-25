@@ -3,7 +3,7 @@
    * [기술 문서](http://docs.testplant.com/eggplant-documentation-home.htm)
 ### 다운로드, 환경설정은 [Wiki 페이지](https://github.com/Kimrock/Eggplant-Functional/wiki)를 확인하세요.
 ------
-![screenshot img](https://user-images.githubusercontent.com/42508143/54476640-02e3c100-4843-11e9-9bc9-049b0edfb730.png)
+<img src="https://user-images.githubusercontent.com/42508143/54476640-02e3c100-4843-11e9-9bc9-049b0edfb730.png" width=600 alt="Eggplant Functional Running")>
 <br>
 
 ------
