@@ -1,6 +1,9 @@
 ## Eggplant Functional
+<!--
 > *"Eggplant Functional is the only test automation solution that dynamically tests the single source of truth for the user experience: the UI. Instead of hooking into the code, the software tests from the user perspective through intelligent image and text understanding, API automation, and WebDriver object automation — all within a single test."*
 <br>
+-->
+에그플랜트 스크립팅, 환경설정, 데모를 한글로 설명합니다.
 
 [:eggplant:  웹사이트](https://eggplant.io/) | [:floppy_disk:  다운로드](https://eggplant.io/downloads) | 
 [:key:  트라이얼](http://info.eggplant.io/try-eggplant) | [:page_facing_up:  기술문서](http://docs.testplant.com/eggplant-documentation-home.htm)
